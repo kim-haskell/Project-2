@@ -1,0 +1,28 @@
+{
+  "name": "Project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kim-haskell/Project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kim-haskell/Project-2/issues"
+  },
+  "homepage": "https://github.com/kim-haskell/Project-2#readme",
+  "dependencies": {
+    "eslint": "^7.6.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4"
+  }
+}
