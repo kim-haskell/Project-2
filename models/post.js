@@ -1,7 +1,7 @@
 // this will show what goes in the post - title, category, body use sequelize.define
 
 module.exports = function (sequelize, DataTypes) {
-    var Post = sequelize.define("Post", {
+    const Post = sequelize.define("Post", {
         title: {
             type: DataTypes.STRING,
             allowNull: false,
