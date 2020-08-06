@@ -1,3 +1,5 @@
+const { BOOLEAN } = require("sequelize/types");
+
 module.exports = function(sequelize, DataTypes) {
     const Neighbor = sequelize.define("Neighbor", {
       name:{
@@ -15,8 +17,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         defaultValue: false
       }, 
-      cars: DataTypes.INTEGER,
-      ranking: DataTypes.INTEGER
+      cars: DataTypes.INTEGER
     });
   
     Neighbor.associate = function(models) {
@@ -28,4 +29,3 @@ module.exports = function(sequelize, DataTypes) {
   
     return Neighbor;
   };
-  
