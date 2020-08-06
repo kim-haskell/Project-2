@@ -1,5 +1,3 @@
-const { BOOLEAN } = require("sequelize/types");
-
 module.exports = function(sequelize, DataTypes) {
     const Neighbor = sequelize.define("Neighbor", {
       name:{
