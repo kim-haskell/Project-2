@@ -1,6 +1,22 @@
 module.exports = function(sequelize, DataTypes) {
     const Neighbor = sequelize.define("Neighbor", {
-      name: DataTypes.STRING
+      name:{
+         type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [1,30]
+        }
+    }, 
+      pets:{
+         type: DataTypes.BOOLEAN,
+         defaultValue: false
+      }, 
+      kids:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+      }, 
+      cars: DataTypes.INTEGER,
+      ranking: DataTypes.INTEGER
     });
   
     Neighbor.associate = function(models) {
