@@ -41,17 +41,18 @@ $(".home").on("click", function(event) {
 });
 
 $(".chat").on("click", function(event) {
-
+    
     const id= $(this).data("id"); //do we need id if database gives us one??
-
-    //bring up the post page for discussion
+    res.render("posts");
+    location.reload();
+    // bring up the post page for discussion
     $.ajax("/api/chat", {
-        type: "PUT",
+        type: "GET",
         
         
     }).then(
         function() {
-            res.render("index"); //double check, should load home page
+            res.render("posts"); //double check, should load home page
             location.reload();
         }
     );
