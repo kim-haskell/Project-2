@@ -15,9 +15,22 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-require("./routes/html-routes.js")(app);
+
 require("./routes/post-api-routes.js")(app);
 require("./routes/neighbor-api.js")(app);
+
+
+app.get("/", function(req, res) {
+    res.render("index");
+  });
+
+  app.get("/neighbors", function(req, res) {
+    res.render("neighbors");
+  });
+
+  app.get("/posts", function(req, res) {
+    res.render("posts");
+  });
 
 db.sequelize.sync({ force: true }).then(function() {
     app.listen(PORT, function() {

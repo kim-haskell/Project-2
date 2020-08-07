@@ -58,21 +58,4 @@ $(".chat").on("click", function(event) {
 
 });
 
-Router.get("/index", function( req, res) {
-    res.render("index")
-})
-
-Router.get("/neighbors", function( req, res) {
-    res.render("neighbors")
-})
-
-Router.get("/posts", function( req, res) {
-    res.render("posts")
-})
-
-
-
-
-
-
 })
