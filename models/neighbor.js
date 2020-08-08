@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 module.exports = function(sequelize, DataTypes) {
     const Neighbor = sequelize.define("Neighbor", {
       name:{
