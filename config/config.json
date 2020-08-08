@@ -1,7 +1,11 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
       "password": "Brandnew12!",
+=======
+      "password": "Karen@@@1234",
+>>>>>>> master
       "database": "neighborhood",
       "host": "127.0.0.1",
       "port": 3306,

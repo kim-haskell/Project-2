@@ -2,14 +2,7 @@
 
 module.exports = function (sequelize, DataTypes) {
     const Post = sequelize.define("Post", {
-        category: {
-            type: DataTypes.STRING,
-            defaultValue: "Personal",
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
+        
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -17,11 +10,29 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        
+        category: {
+            type: DataTypes.STRING,
+            defaultValue: "Discussion",
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+       
         body: {
             type: DataTypes.TEXT,
             allowNull: false,
             len: [1]
-        }
+        },
+      
     });
 
     Post.associate = function (models) {
